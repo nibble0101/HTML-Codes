@@ -1,0 +1,131 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #070729;
+    color: white;
+    font-family: monospace;
+}
+.container{
+    width: 80vw;
+    height: 100vh;
+    margin: 0 auto;
+   
+}
+
+h1{
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 1em;
+}
+table{
+    width: 50%;
+    margin: 2em auto;
+
+}
+table, th, td {
+    border: 1px solid teal;
+    border-collapse: collapse;
+}
+td, th{
+    width: 20%;
+    min-width: 100px;
+    text-align: center;
+    height:30px ;
+    color:yellowgreen;
+    font-family: monospace;
+    font-size: 1.3em;
+}
+th{
+    color: whitesmoke;
+}
+.caption{
+    color: turquoise;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.hidden{
+    position: fixed;
+    transform: translateX(-500px); 
+    top: 5em;
+    opacity: 0;
+    transition: transform 300ms linear, opacity 300ms linear;
+}
+
+ul li{
+    list-style-type: none;
+
+}
+ul li a{
+    text-decoration: none;
+    display: block;
+    width: 80%;
+    font-size: 1.2em;
+    color: yellowgreen;
+    padding:0.5em 1em;
+    background-color: gray;
+}
+ul li a:hover{
+    background-color: #070729;
+    color: whitesmoke;
+}
+
+.show {
+    position: fixed;
+    top: 5em;
+    left: 10px;
+    transform: translateX(0px); 
+    opacity: 1;
+    width: 80%;
+    transition: transform 300ms linear, opacity 300ms linear;
+
+    
+}
+.menu-container span{
+    position: fixed;
+    display: inline-block;
+    top: 0px;
+    left: 0px;
+    font-size: 2em;
+    padding: 1em;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 1000ms linear;
+}
+#hidden{
+    column-count: 2;
+    background-color: gray;
+}
+.copy-right {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+}
+.copy-right span {
+    padding: 5px;
+}
+
+@media screen and (max-width: 700px){
+    .show{
+        width: 100%;
+        left: 0px;
+        top: 4em;
+    }
+    #hidden{
+        column-count: 3;
+    }
+    .menu-container span{
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+    ul li a{
+        font-size: 1em;
+    }
+    
+}
+
